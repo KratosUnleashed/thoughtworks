@@ -14,7 +14,7 @@ public class RatingController {
 	@Autowired
 	RatingService ratingService;
 
-	@PostMapping("add")
+	@PostMapping("/")
 	public void addRating(@RequestBody Rating rating) {
 		ratingService.addRating(rating);
 	}

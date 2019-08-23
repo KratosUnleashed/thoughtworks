@@ -1,12 +1,20 @@
 package com.anand.foody.entity;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 
-@Component
+@Entity
 public class Rating {
 	
+	@Id
+	@GeneratedValue
 	private long id;
+	@Column
 	private long userId = 0;
+	@JoinColumn()
 	private long restaurantId;
 	private String comments;
 	public long getId() {

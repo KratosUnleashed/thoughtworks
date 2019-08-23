@@ -3,11 +3,11 @@ package com.anand.foody.entity;
 import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
 
 import com.anand.foody.Constants.CUISINES;
 
-@Component
+@Entity
 public class Restaurant extends RestaurantKey implements Serializable {
 
 	/**

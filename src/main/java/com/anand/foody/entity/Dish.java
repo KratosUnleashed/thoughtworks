@@ -2,11 +2,17 @@ package com.anand.foody.entity;
 
 import java.io.Serializable;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.anand.foody.Constants.CUISINES;
 
-@Component
+@Entity
+@Table(name = "Dish")
 public class Dish implements Serializable {
 
 	/**
@@ -14,9 +20,14 @@ public class Dish implements Serializable {
 	 */
 	private static final long serialVersionUID = 2465480050540567096L;
 	
+	@Id
+	@GeneratedValue
 	private long id;
+	@Column
 	private CUISINES category;
+	@Column
 	private String name;
+	@Transient
 	private byte[] image;
 	
 	public long getId() {
