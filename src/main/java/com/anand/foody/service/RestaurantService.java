@@ -19,8 +19,7 @@ public class RestaurantService {
 	}
 
 	public Restaurant getRestaurantById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return dao.getRestaurantById(id);
 	}
 
 }

@@ -2,8 +2,11 @@ package com.anand.foody.entity;
 
 import java.io.Serializable;
 
+import org.springframework.stereotype.Component;
+
 import com.anand.foody.Constants.CUISINES;
 
+@Component
 public class Dish implements Serializable {
 
 	/**
